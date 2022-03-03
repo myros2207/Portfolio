@@ -123,5 +123,6 @@ li{
 }
 
 .info{
+    background: red;
     display: flex;
 }
