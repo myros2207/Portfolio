@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style_2.css">
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="app.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
     <title>Myroslav Torbiak</title>
 </head>
 <body>
@@ -17,7 +44,7 @@
     <div class="logo"><a href="">M<span>K</span></a></div>
     <div class="menu">
         <ul>
-            <li><a href=""><span>01.</span> Me</a></li>
+            <li><a href="#me"><span>01.</span> Me</a></li>
             <li><a href=""><span>02.</span> Project</a></li>
             <li><a href=""><span>03.</span> Contact</a></li>
             <li class="doc-cv"><a href="doc/CV_Myroslav_Torbiak-7.pdf" target="_blank">Moje CV</a></li>
@@ -26,28 +53,36 @@
 </div>
 
 </header>
+<div class=" left-menu">
+    <ul>
+        <li><a href=""><img src="img/github.png" alt=""></a></li>
+        <li><a href=""><img src="img/instagram.png" alt=""></a></li>
+        <li><a href=""><img src="img/facebook.png" alt=""></a></li>
+        <li><div class="line"></div></li>
+    </ul>
+</div>
+
+<div class="right-menu">
+    <p>Myroslav</p>
+    <div class="line"></div>
+</div>
+<div id="me"></div>
 <div class="content">
 
 <div class="container">
     <div class="info">
-        <p>My name is: </p>
+        <div class="typewriter">
+            <h1>Hi, my name: <span> Myroslav</span></h1>
+
+            <p id="line-1">An inde</p>
+            <p id="line-2">Send me a message to discuss your project.</p>
+
+        </div>
     </div>
 
 </div>
 </div>
-    <div class=" left-menu">
-        <ul>
-            <li><a href=""><img src="img/github.png" alt=""></a></li>
-            <li><a href=""><img src="img/instagram.png" alt=""></a></li>
-            <li><a href=""><img src="img/facebook.png" alt=""></a></li>
-            <li><div class="line"></div></li>
-        </ul>
-    </div>
 
-    <div class="right-menu">
-        <p>Myroslav</p>
-        <div class="line"></div>
-    </div>
 
 </body>
 </html>

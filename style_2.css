@@ -146,8 +146,8 @@ li{
     white-space: nowrap;
     overflow: hidden;
     width: 50%;
-    white-space: nowrap;
-    overflow: hidden;
+
+
     animation: typewriter 2s steps(25) 1s 1 normal both;
 }
 
@@ -167,8 +167,6 @@ li{
     white-space: nowrap;
     overflow: hidden;
     width: 405px;
-    white-space: nowrap;
-    overflow: hidden;
     animation: typewriter 3s steps(40) 1s 1 normal both;
     animation-delay: 7s;
 }
