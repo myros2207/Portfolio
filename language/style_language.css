@@ -88,7 +88,6 @@ a{
 
 }
 
-
 /*.left-menu {*/
 /*    bottom: 0;*/
 /*    left: 0;*/
@@ -312,5 +311,9 @@ a {
 
 
 /*end*/
+
+link{
+    display: compact;
+}
 
 
